@@ -9,7 +9,7 @@ import (
 
 func Switch() {
 	if len(os.Args) < 3 {
-		fmt.Println("Usage: go run . [ddg|ggl] <search_query>")
+		fmt.Println("Usage: go run . [ddg|ggl|yho] <search_query>")
 		os.Exit(0)
 	} else if len(os.Args) == 2 {
 		switch os.Args[1] {
@@ -18,6 +18,8 @@ func Switch() {
 		case "ddg":
 			Scraper()
 		case "ggl":
+			Scraper()
+		case "yho":
 			Scraper()
 		default:
 			fmt.Println("Try --help for more information.")
@@ -28,6 +30,8 @@ func Switch() {
 		case "ddg":
 			Scraper()
 		case "ggl":
+			Scraper()
+		case "yho":
 			Scraper()
 		}
 	}
